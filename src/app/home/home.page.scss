@@ -1,3 +1,5 @@
+
+
 #container {
   text-align: center;
 
@@ -24,4 +26,68 @@
 
 #container a {
   text-decoration: none;
+}
+
+h2 {
+  margin-left: 12px;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+
+.card {
+  width: 45%;
+  border-radius: 15px;
+background: #e0e0e0;
+box-shadow:  5px 5px 10px #bebebe,
+             -5px -5px 10px #ffffff;
+margin-bottom: 20px;
+cursor: pointer;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  p {
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    margin: 10px;
+  }
+
+
+  .description {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      font-weight: normal;
+      opacity: 0.7;
+      width: 50%;
+      font-size: 12px;
+    }
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      font-size: 12px;
+      text-align: center;
+      font-weight: bold;
+      margin-right: 5px;
+      svg {
+        width: 13px;
+        color: #fada59;
+
+      }
+    }
+  }
+
 }

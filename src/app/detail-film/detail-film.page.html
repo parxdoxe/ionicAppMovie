@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ film.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+ <div class="container">
+  <img class="affiche" [src]="'https://image.tmdb.org/t/p/w500/' + film.backdrop_path"/>
+  <img class="poster" [src]="'https://image.tmdb.org/t/p/w500/' + film.poster_path"/>
+ 
+ <div class="genre" *ngFor="let genr of genre">
+  {{ genr.name }}
+ </div>
+ <div class="actor" *ngFor="let acteur of acteurs" [state]="acteur" routerLink="/actor">
+    <img *ngIf="acteur.profile_path" [src]="'https://image.tmdb.org/t/p/w500/' + acteur.profile_path " alt="">
+    <img *ngIf="!acteur.profile_path" src="https://raw.githubusercontent.com/ionic-team/ionic-docs/551cb638c600b0cfac6fcbf9075baa9f63917814/static/demos/api/avatar/avatar.svg" alt="">
+    <h2>{{ acteur.name }}</h2>
+    <p>{{ acteur.character }}</p>
+ </div>
+
+</div>
+     
+    
+
+</ion-content>
