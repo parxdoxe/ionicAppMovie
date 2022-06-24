@@ -3,13 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Storage } from '@ionic/storage-angular';
 
 @Component({
-  selector: 'app-populaire',
-  templateUrl: './populaire.page.html',
-  styleUrls: ['./populaire.page.scss'],
+  selector: 'app-actuellement',
+  templateUrl: './actuellement.page.html',
+  styleUrls: ['./actuellement.page.scss'],
 })
-export class PopulairePage implements OnInit {
+export class ActuellementPage implements OnInit {
 
-  
   films: any = []
   filmDetail: any = []
   search: string = ''
@@ -19,7 +18,7 @@ export class PopulairePage implements OnInit {
   constructor(private http: HttpClient, private storage: Storage) {}
 
   ionViewWillEnter(){
-    this.http.get('https://api.themoviedb.org/3/movie/top_rated?api_key=40009de0f135cfd09989d99f18892b45').subscribe( response => {
+    this.http.get('https://api.themoviedb.org/3/movie/upcoming?api_key=40009de0f135cfd09989d99f18892b45').subscribe( response => {
     this.films = response['results']
     console.log(this.films);
     })
@@ -35,6 +34,5 @@ export class PopulairePage implements OnInit {
       this.searchB = response['results']
       console.log(this.searchB);})
   }
-  
 
 }

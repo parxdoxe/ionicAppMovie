@@ -12,7 +12,7 @@
 
 <ion-content fullscreen>
   
-  <h2>Populaires :</h2>
+  <h2>Actuellement :</h2>
 
   <div *ngIf="!search" class="container">
         <div *ngFor="let film of films"  class="card" [state]="film" routerLink="/detail-film" >
@@ -48,3 +48,4 @@
 
   
 </ion-content>
+
