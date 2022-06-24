@@ -1,0 +1,27 @@
+.actor {
+    display: flex;
+    justify-content: space-around;
+}
+
+.profil {
+    width: 45%;
+    margin-top: 10px;
+    img {
+        border-radius: 10px;
+    }
+}
+
+.description {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h2{
+        font-size: 18px;
+        text-align: center;
+    }
+    p{
+        font-size: 12px;
+    }
+}

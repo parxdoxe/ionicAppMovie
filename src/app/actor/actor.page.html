@@ -1,14 +1,39 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>actor</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ actorDetail.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 <div class="container">
   <div class="actor">
-    <img [src]="" alt="">
-    <h2>{{ actorDetail.name }}</h2>
+    <div class="profil">
+    <img [src]="'https://image.tmdb.org/t/p/w500/' + actorDetail.profile_path" alt="">
+    </div>
+    <div class="description">
+      <h2>{{ actorDetail.name }}</h2>
+      <p>{{ actorDetail.place_of_birth}}</p>
+      <p>{{ actorDetail.birthday }}</p>
+   </div>
   </div>
+  
+  <ion-list>
+
+    <ion-item *ngFor="let film of filmActor">
+      <ion-avatar slot="start">
+        <img *ngIf="film.poster_path" [src]="'https://image.tmdb.org/t/p/w500/' + film.poster_path" />
+        <img *ngIf="!film.poster_path" src="https://baptistedrapeau.files.wordpress.com/2019/02/logo-cave-c3a0-film-rond-blanc-noir.png" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ film.title }}</h2>
+        <p>{{ film.release_date }}</p>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+
 </div>
 </ion-content>

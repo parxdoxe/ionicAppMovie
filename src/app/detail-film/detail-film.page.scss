@@ -21,3 +21,72 @@
 .actor {
     cursor: pointer;
 }
+
+.genre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 12px;
+}
+
+.containerActor{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .actor {
+        width: 45%;
+        margin: 10px 0;
+        border-radius: 15px;
+background: #e0e0e0;
+box-shadow:  5px 5px 10px #bebebe,
+             -5px -5px 10px #ffffff;
+    }
+    img{
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+    h2{
+        padding: 10px;
+        font-weight: bold;
+        font-size: 15px;
+        margin: 0px;
+    }
+    p{  
+        padding: 10px;
+        font-size: 12px;
+        opacity: 0.7;
+        margin: 5px 0;
+    }
+}
+
+.note {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    p {
+      font-weight: normal;
+      opacity: 0.7;
+      width: 50%;
+      font-size: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      font-size: 12px;
+      text-align: center;
+      font-weight: bold;
+      margin-right: 5px;
+      svg {
+        width: 13px;
+        color: #fada59;
+
+      }
+    }
+  }
